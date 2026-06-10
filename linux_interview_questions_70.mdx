@@ -599,3 +599,12 @@ Apply least privilege, patch regularly, use firewalls, and secure SSH access.
 ## 150. What Linux skills should every DevOps engineer know?
 
 Commands, networking, scripting, troubleshooting, services, storage, security, containers, and cloud fundamentals.
+
+| Feature | Hard Link | Soft Link |
+|----------|------------|------------|
+| Meaning | Another name for the same file | Shortcut to a file |
+| Inode | Shares the same inode | Has a different inode |
+| Original File Deleted | Still works | Breaks (becomes a dangling link) |
+| Cross Filesystem | Cannot cross filesystems | Can cross filesystems |
+| Directories | Usually cannot link directories | Can link directories |
+| Create Command | `ln file1 hardlink1` | `ln -s file1 softlink1` |
