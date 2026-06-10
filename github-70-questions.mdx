@@ -3,34 +3,44 @@
 ## Git Basics
 
 **1. What is Git?**
+
 Git is a **distributed version control system** used to track changes in source code and collaborate with multiple developers.
 
 **2. What is the difference between Git and GitHub?**
+
 - **Git**: A version control tool
 - **GitHub**: A cloud-based platform that hosts Git repositories and provides collaboration features
 
 **3. What is a repository?**
+
 A repository is a storage location that contains source code, commit history, branches, and project files.
 
 **4. What is a commit?**
+
 A commit is a **snapshot of changes** made to files in a repository.
 
 **5. What is the purpose of git init?**
+
 It **initializes a new Git repository** in the current directory.
 
 **6. What is the purpose of git clone?**
+
 It **creates a local copy** of a remote repository.
 
 **7. What is the purpose of git status?**
+
 It shows the **current state of the repository** including modified, staged, and untracked files.
 
 **8. What is the purpose of git add?**
+
 It **stages changes** before committing them.
 
 **9. What is the purpose of git commit?**
+
 It **saves staged changes** into Git history.
 
 **10. What is the purpose of git log?**
+
 It **displays commit history**.
 
 ---
@@ -38,17 +48,21 @@ It **displays commit history**.
 ## Branching
 
 **11. What is a branch?**
+
 A branch is an **independent line of development**.
 
 **12. Why are branches used?**
+
 Branches **allow developers to work on features and fixes** without affecting the main codebase.
 
 **13. How do you create a branch?**
+
 ```bash
 git branch feature-branch
 ```
 
 **14. How do you switch branches?**
+
 ```bash
 git checkout branch-name
 ```
@@ -58,25 +72,31 @@ git switch branch-name
 ```
 
 **15. How do you create and switch to a branch?**
+
 ```bash
 git checkout -b feature-branch
 ```
 
 **16. What is the main branch?**
+
 The **main branch** is the **primary branch that contains production-ready code**.
 
 **17. What is a feature branch?**
+
 A **feature branch** is used to **develop a specific feature separately** from the main branch.
 
 **18. How do you delete a branch?**
+
 ```bash
 git branch -d branch-name
 ```
 
 **19. What is branch protection?**
+
 **Branch protection** prevents **unauthorized changes to critical branches**.
 
 **20. What is a detached HEAD state?**
+
 It occurs when **HEAD points directly to a commit** instead of a branch.
 
 ---
@@ -84,38 +104,48 @@ It occurs when **HEAD points directly to a commit** instead of a branch.
 ## Merging and Rebasing
 
 **21. What is git merge?**
+
 It **combines changes from one branch into another**.
 
 **22. What is a merge conflict?**
+
 A **conflict occurs when Git cannot automatically determine** which changes should be kept.
 
 **23. How do you resolve merge conflicts?**
+
 1. Edit conflicting files
 2. Remove conflict markers
 3. Commit the resolved changes
 
 **24. What is git rebase?**
+
 **Rebase moves commits** from one branch onto another base commit.
 
 **25. Difference between merge and rebase?**
+
 | Operation | Behavior |
 |-----------|----------|
 | **Merge** | Preserves history, creates merge commits |
 | **Rebase** | Creates a cleaner linear history |
 
 **26. What is git cherry-pick?**
+
 It **applies a specific commit** from one branch to another.
 
 **27. What is fast-forward merge?**
+
 A **merge where no new merge commit is required** because history is linear.
 
 **28. What is squash merge?**
+
 It **combines multiple commits into a single commit** before merging.
 
 **29. What is git revert?**
+
 It **creates a new commit that undoes changes** from a previous commit.
 
 **30. What is git reset?**
+
 It **moves HEAD to a specific commit** and optionally modifies staging and working directories.
 
 ---
@@ -123,42 +153,52 @@ It **moves HEAD to a specific commit** and optionally modifies staging and worki
 ## Remote Repositories
 
 **31. What is origin?**
+
 **Origin** is the **default name of the remote repository**.
 
 **32. How do you view remotes?**
+
 ```bash
 git remote -v
 ```
 
 **33. What is git fetch?**
+
 It **downloads changes from a remote repository** without merging them.
 
 **34. What is git pull?**
+
 It **fetches and merges changes** from a remote repository.
 
 **35. What is git push?**
+
 It **uploads local commits** to a remote repository.
 
 **36. Difference between pull and fetch?**
+
 | Operation | Behavior |
 |-----------|----------|
 | **Fetch** | Only downloads changes |
 | **Pull** | Downloads and merges changes |
 
 **37. How do you add a remote repository?**
+
 ```bash
 git remote add origin REPO_URL
 ```
 
 **38. How do you remove a remote repository?**
+
 ```bash
 git remote remove origin
 ```
 
 **39. What happens during git push?**
+
 **Local commits are transferred** to the remote repository.
 
 **40. How do you push a new branch?**
+
 ```bash
 git push -u origin branch-name
 ```
@@ -168,33 +208,43 @@ git push -u origin branch-name
 ## GitHub Concepts
 
 **41. What is GitHub?**
+
 **GitHub** is a **cloud-based platform** for hosting Git repositories and collaborating on software projects.
 
 **42. What is a Pull Request?**
+
 A **Pull Request** is a **request to merge changes** from one branch into another.
 
 **43. Why are Pull Requests important?**
+
 They **enable code review and collaboration** before code reaches production.
 
 **44. What is code review?**
+
 A **process where developers review code** written by others before merging.
 
 **45. What are GitHub Actions?**
+
 **GitHub Actions** is a **CI/CD platform** used to **automate workflows**.
 
 **46. What is a workflow?**
+
 A **workflow** is an **automated process** defined in YAML files.
 
 **47. What is a runner?**
+
 A **runner** is the **machine that executes** GitHub Actions jobs.
 
 **48. What are GitHub Secrets?**
+
 **Secrets securely store sensitive information** such as passwords and API keys.
 
 **49. What is a GitHub Organization?**
+
 A **shared account** that **manages repositories and teams**.
 
 **50. What is GitHub Enterprise?**
+
 An **enterprise-grade version** of GitHub for organizations.
 
 ---
@@ -202,18 +252,22 @@ An **enterprise-grade version** of GitHub for organizations.
 ## GitHub Actions
 
 **51. What is Continuous Integration?**
+
 The **practice of automatically building and testing** code changes.
 
 **52. What is Continuous Delivery?**
+
 The **ability to deploy applications quickly and safely**.
 
 **53. Where are workflow files stored?**
+
 Inside:
 ```
 .github/workflows/
 ```
 
 **54. What triggers a workflow?**
+
 Events such as:
 - `push`
 - `pull_request`
@@ -221,23 +275,29 @@ Events such as:
 - `schedule`
 
 **55. What is workflow_dispatch?**
+
 A **manual trigger** for GitHub Actions.
 
 **56. What are GitHub Action artifacts?**
+
 **Files generated by workflows** and stored for later use.
 
 **57. What is a matrix strategy?**
+
 A **method to run jobs across multiple environments simultaneously**.
 
 **58. How do you use secrets in GitHub Actions?**
+
 ```yaml
 ${{ secrets.MY_SECRET }}
 ```
 
 **59. What is a self-hosted runner?**
+
 A **runner hosted on your own infrastructure**.
 
 **60. What is a reusable workflow?**
+
 A **workflow that can be called** from another workflow.
 
 ---
@@ -245,49 +305,59 @@ A **workflow that can be called** from another workflow.
 ## Troubleshooting Scenarios
 
 **61. Git push is rejected. What do you do?**
+
 1. Run `git pull`
 2. Resolve conflicts if necessary
 3. Push again
 
 **62. Accidentally committed sensitive data. What do you do?**
+
 1. Remove it
 2. Rotate credentials
 3. Rewrite history if required
 
 **63. How do you find who changed a line?**
+
 ```bash
 git blame filename
 ```
 
 **64. How do you compare branches?**
+
 ```bash
 git diff branch1..branch2
 ```
 
 **65. How do you compare commits?**
+
 ```bash
 git diff commit1 commit2
 ```
 
 **66. How do you recover deleted commits?**
+
 ```bash
 git reflog
 ```
 
 **67. What is git stash?**
+
 It **temporarily stores uncommitted changes**.
 
 **68. How do you apply stashed changes?**
+
 ```bash
 git stash apply
 ```
 
 **69. How do you list stashes?**
+
 ```bash
 git stash list
 ```
 
 **70. What is the importance of Git for DevOps?**
+
 Git provides:
 - ✅ **Version control**
 - ✅ **Collaboration**
