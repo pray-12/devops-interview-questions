@@ -1,0 +1,289 @@
+What is Git?
+
+Git is a distributed version control system used to track changes in source code and collaborate with multiple developers.
+
+What is the difference between Git and GitHub?
+
+Git is a version control tool, while GitHub is a cloud-based platform that hosts Git repositories and provides collaboration features.
+
+What is a repository?
+
+A repository is a storage location that contains source code, commit history, branches, and project files.
+
+What is a commit?
+
+A commit is a snapshot of changes made to files in a repository.
+
+What is the purpose of git init?
+
+It initializes a new Git repository in the current directory.
+
+What is the purpose of git clone?
+
+It creates a local copy of a remote repository.
+
+What is the purpose of git status?
+
+It shows the current state of the repository including modified, staged, and untracked files.
+
+What is the purpose of git add?
+
+It stages changes before committing them.
+
+What is the purpose of git commit?
+
+It saves staged changes into Git history.
+
+What is the purpose of git log?
+
+It displays commit history.
+
+Branching
+What is a branch?
+
+A branch is an independent line of development.
+
+Why are branches used?
+
+Branches allow developers to work on features and fixes without affecting the main codebase.
+
+How do you create a branch?
+git branch feature-branch
+How do you switch branches?
+git checkout branch-name
+
+or
+
+git switch branch-name
+How do you create and switch to a branch?
+git checkout -b feature-branch
+What is the main branch?
+
+The main branch is the primary branch that contains production-ready code.
+
+What is a feature branch?
+
+A feature branch is used to develop a specific feature separately from the main branch.
+
+How do you delete a branch?
+git branch -d branch-name
+What is branch protection?
+
+Branch protection prevents unauthorized changes to critical branches.
+
+What is a detached HEAD state?
+
+It occurs when HEAD points directly to a commit instead of a branch.
+
+Merging and Rebasing
+What is git merge?
+
+It combines changes from one branch into another.
+
+What is a merge conflict?
+
+A conflict occurs when Git cannot automatically determine which changes should be kept.
+
+How do you resolve merge conflicts?
+
+Edit conflicting files, remove conflict markers, and commit the resolved changes.
+
+What is git rebase?
+
+Rebase moves commits from one branch onto another base commit.
+
+Difference between merge and rebase?
+
+Merge preserves history while rebase creates a cleaner linear history.
+
+What is git cherry-pick?
+
+It applies a specific commit from one branch to another.
+
+What is fast-forward merge?
+
+A merge where no new merge commit is required because history is linear.
+
+What is squash merge?
+
+It combines multiple commits into a single commit before merging.
+
+What is git revert?
+
+It creates a new commit that undoes changes from a previous commit.
+
+What is git reset?
+
+It moves HEAD to a specific commit and optionally modifies staging and working directories.
+
+Remote Repositories
+What is origin?
+
+Origin is the default name of the remote repository.
+
+How do you view remotes?
+git remote -v
+What is git fetch?
+
+It downloads changes from a remote repository without merging them.
+
+What is git pull?
+
+It fetches and merges changes from a remote repository.
+
+What is git push?
+
+It uploads local commits to a remote repository.
+
+Difference between pull and fetch?
+
+Fetch only downloads changes while pull downloads and merges them.
+
+How do you add a remote repository?
+git remote add origin REPO_URL
+How do you remove a remote repository?
+git remote remove origin
+What happens during git push?
+
+Local commits are transferred to the remote repository.
+
+How do you push a new branch?
+git push -u origin branch-name
+GitHub Concepts
+What is GitHub?
+
+GitHub is a cloud-based platform for hosting Git repositories and collaborating on software projects.
+
+What is a Pull Request?
+
+A Pull Request is a request to merge changes from one branch into another.
+
+Why are Pull Requests important?
+
+They enable code review and collaboration before code reaches production.
+
+What is code review?
+
+A process where developers review code written by others before merging.
+
+What are GitHub Actions?
+
+GitHub Actions is a CI/CD platform used to automate workflows.
+
+What is a workflow?
+
+A workflow is an automated process defined in YAML files.
+
+What is a runner?
+
+A runner is the machine that executes GitHub Actions jobs.
+
+What are GitHub Secrets?
+
+Secrets securely store sensitive information such as passwords and API keys.
+
+What is a GitHub Organization?
+
+A shared account that manages repositories and teams.
+
+What is GitHub Enterprise?
+
+An enterprise-grade version of GitHub for organizations.
+
+GitHub Actions
+What is Continuous Integration?
+
+The practice of automatically building and testing code changes.
+
+What is Continuous Delivery?
+
+The ability to deploy applications quickly and safely.
+
+Where are workflow files stored?
+
+Inside:
+
+.github/workflows/
+What triggers a workflow?
+
+Events such as push, pull_request, workflow_dispatch, and schedule.
+
+What is workflow_dispatch?
+
+A manual trigger for GitHub Actions.
+
+What are GitHub Action artifacts?
+
+Files generated by workflows and stored for later use.
+
+What is a matrix strategy?
+
+A method to run jobs across multiple environments simultaneously.
+
+How do you use secrets in GitHub Actions?
+${{ secrets.MY_SECRET }}
+What is a self-hosted runner?
+
+A runner hosted on your own infrastructure.
+
+What is a reusable workflow?
+
+A workflow that can be called from another workflow.
+
+Troubleshooting Scenarios
+Git push is rejected. What do you do?
+
+Run git pull, resolve conflicts if necessary, and push again.
+
+Accidentally committed sensitive data. What do you do?
+
+Remove it, rotate credentials, and rewrite history if required.
+
+How do you find who changed a line?
+git blame filename
+How do you compare branches?
+git diff branch1..branch2
+How do you compare commits?
+git diff commit1 commit2
+How do you recover deleted commits?
+
+Use:
+
+git reflog
+What is git stash?
+
+It temporarily stores uncommitted changes.
+
+How do you apply stashed changes?
+git stash apply
+How do you list stashes?
+git stash list
+What is the importance of Git for DevOps?
+
+Git provides version control, collaboration, auditability, CI/CD integration, infrastructure-as-code management, and deployment automation.
+
+For DevOps interviews, the most frequently asked commands are:
+
+git init
+git clone
+git status
+git add
+git commit
+git log
+git branch
+git checkout
+git switch
+git merge
+git rebase
+git cherry-pick
+git revert
+git reset
+git fetch
+git pull
+git push
+git stash
+git diff
+git blame
+git reflog
+git tag
+git remote
